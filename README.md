@@ -46,6 +46,31 @@ The application is written using the [Flask](http://flask.pocoo.org/) library in
 Both must be installed to run the project.
 Alternatively, this can be easily achieved by installing [Anaconda](https://www.anaconda.com/download/) which includes both of them.
 
+#### Installing TensorFlow on Windows
+
+Installing with Anaconda
+
+1. Follow the instructions on the [Anaconda](https://www.anaconda.com/download/) download site to download and install Anaconda.
+
+2. Create a conda environment named tensorflow by invoking the following command:
+```
+C:> conda create -n tensorflow python=3.5
+``` 
+Activate the conda environment by issuing the following command:
+```
+C:> activate tensorflow
+
+ (tensorflow)C:>  # Your prompt should change 
+ ```
+Issue the appropriate command to install TensorFlow inside your conda environment. To install the CPU-only version of TensorFlow, enter the following command:
+```
+(tensorflow)C:> pip install --ignore-installed --upgrade tensorflow 
+```
+To install the GPU version of TensorFlow, enter the following command (on a single line):
+```
+(tensorflow)C:> pip install --ignore-installed --upgrade tensorflow-gpu
+```
+
 Once these prerequisites are installed, the application can be run locally:
 ```bash
 $ python run.py
