@@ -21,12 +21,30 @@ Note that accuracy of approximately 99% is considered excellent in recognising d
 
 ## Design
 
+### List my Questions.
+
+First, I start by listing my questions that I want to answer about my application.
+
+* What
+
+From these questions, I can identify the attributes that must belong to entities within application .
+
 ## Implementation
-1. Create simple page using [flask](http://flask.pocoo.org/) 
+1. Created simple page using [flask](http://flask.pocoo.org/) example  
+
+to run it:
+```
+$ export FLASK_APP=hello.py
+$ flask run
+ * Running on http://127.0.0.1:5000/
+ ```
+
+
 
 ### How to run the application
 The application is written using the [Flask](http://flask.pocoo.org/) library in [Python 3](https://www.python.org).
 Both must be installed to run the project.
+Alternatively, this can be easily achieved by installing [Anaconda](https://www.anaconda.com/download/) which includes both of them.
 
 Once these prerequisites are installed, the application can be run locally:
 ```bash
