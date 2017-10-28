@@ -34,7 +34,7 @@ From these questions, I can identify the attributes that must belong to entities
 
 to run it:
 ```
-$ export FLASK_APP=hello.py
+$ set FLASK_APP=hello.py
 $ flask run
  * Running on http://127.0.0.1:5000/
  ```
