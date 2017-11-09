@@ -46,6 +46,16 @@ The application is written using the [Flask](http://flask.pocoo.org/) library in
 Both must be installed to run the project.
 Alternatively, this can be easily achieved by installing [Anaconda](https://www.anaconda.com/download/) which includes both of them.
 
+boto3 also need to be installed:
+```
+pip install boto3
+```
+I had an issue to install it on my laptop, so I used:
+```
+easy_install boto3
+```
+More required software names can be found in the requirements file, but most of it included [requirements](https://github.com/andryuha77/Emerging-Technologies-Project/blob/master/requirements.txt) in [Anaconda](https://www.anaconda.com/download/).
+
 #### Installing TensorFlow on Windows
 
 Installing with Anaconda
@@ -73,7 +83,7 @@ To install the GPU version of TensorFlow, enter the following command (on a sing
 
 Once these prerequisites are installed, the application can be run locally:
 ```bash
-$ python run.py
+$ python main.py
 ```
 Once the application is running, it can be accessed by pointing your browser at http://127.0.0.1:5000/ .
 
