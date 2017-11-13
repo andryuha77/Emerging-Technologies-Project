@@ -84,7 +84,7 @@ function saveImg()
 {
 	document.getElementById("rec_result").innerHTML = "connecting...";
 	var canvas = document.getElementById("the_stage");
-	var dataURL = canvas.toDataURL('image/jpg');
+	var dataURL = canvas.toDataURL('image/BMP');
 	var dig = document.querySelector('input[name="action"]:checked').value;
 	$.ajax({
 	  type: "POST",

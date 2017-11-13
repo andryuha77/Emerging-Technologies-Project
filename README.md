@@ -54,12 +54,6 @@ I had an issue to install it on my laptop, so I used:
 ```
 easy_install boto3
 ```
-keras.io was used for model generation, use:
-```
-easy_install keras
-```
-for keras instalation.
-
 More required software names can be found in the requirements file, but most of it included [requirements](https://github.com/andryuha77/Emerging-Technologies-Project/blob/master/requirements.txt) in [Anaconda](https://www.anaconda.com/download/).
 
 #### Installing TensorFlow on Windows
@@ -86,6 +80,11 @@ To install the GPU version of TensorFlow, enter the following command (on a sing
 ```
 (tensorflow)C:> pip install --ignore-installed --upgrade tensorflow-gpu
 ```
+keras.io was used for model generation, use:
+```
+easy_install keras
+```
+for keras instalation.
 
 Once these prerequisites are installed, the application can be run locally:
 ```bash
@@ -97,7 +96,9 @@ Once the application is running, it can be accessed by pointing your browser at 
 This web application runs in [Python 3](https://www.python.org) using the [Flask](http://flask.pocoo.org/) web micro-framework.
 Python 3 and Flask were requirements for the project.
 
-### Reference
-Adapted from:
+### References:
+adapted from : http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
 
-Adapted from:
+adapted from : https://github.com/Erlemar/digits_little
+
+adapted from: https://github.com/visraman26/DigitRecognition/blob/master/digitRecognition.py

@@ -13,7 +13,7 @@ class Model(object):
 		self.nothing = 0
 
 	def save_image(self, drawn_digit, image):
-		filename = 'digit' + str(drawn_digit) + '__' + str(uuid.uuid1()) + '.jpg'
+		filename = 'digit' + str(drawn_digit) + '__' + str(uuid.uuid1()) + '.BMP'
 		with open('tmp/' + filename, 'wb') as f:
 			f.write(image)
 			
