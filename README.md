@@ -54,6 +54,12 @@ I had an issue to install it on my laptop, so I used:
 ```
 easy_install boto3
 ```
+keras.io was used for model generation, use:
+```
+easy_install keras
+```
+for keras instalation.
+
 More required software names can be found in the requirements file, but most of it included [requirements](https://github.com/andryuha77/Emerging-Technologies-Project/blob/master/requirements.txt) in [Anaconda](https://www.anaconda.com/download/).
 
 #### Installing TensorFlow on Windows
