@@ -24,37 +24,80 @@
 
       <div class="starter-template">
         <h1>Drawing box</h1>
-        <p class="lead">Drow number to save</p>
+        <p class="lead">Draw number here!</p>
       </div>
 
       <!-- Adapted from: https://habrahabr.ru/company/ods/blog/335998/ -->
+      <!-- https://github.com/sugyan/tensorflow-mnist/blob/master/templates/index.html -->
       <div>
-        <canvas id="the_stage" width="200" height="200" align="left">fsf</canvas>
+        <canvas id="main"></canvas>
         <div>
           <button type="button" class="btn btn-default butt" onclick="clearCanvas()"><strong>clear</strong></button>
-          <button type="button" class="btn btn-default butt" id="save" onclick="saveImg()"><strong>save</strong></button>
         </div>
-      <div class="col-md-6 column">
-
-          <div>
-              <p class="lead"></p>Please select one of the following<br></p>
-              <input type="radio" name="action" value="0" id="digit">0<br>
-              <input type="radio" name="action" value="1" id="digit">1<br>
-              <input type="radio" name="action" value="2" id="digit">2<br>
-              <input type="radio" name="action" value="3" id="digit">3<br>
-              <input type="radio" name="action" value="4" id="digit">4<br>
-              <input type="radio" name="action" value="5" id="digit">5<br>
-              <input type="radio" name="action" value="6" id="digit">6<br>
-              <input type="radio" name="action" value="7" id="digit">7<br>
-              <input type="radio" name="action" value="8" id="digit">8<br>
-              <input type="radio" name="action" value="9" id="digit">9<br>
-            </div>
-          </div>       
-
-        <h3>result:</h3>
-        <h2 id="rec_result"></h2>
+        <div class="col-md-6">
+          <p>input:</p>
+          <canvas id="input" style="border:1px solid" width="140" height="140"></canvas>
+          <hr>
+          <p>output:</p>
+          <table id="output" class="table">
+            <tr>
+              <th class="col-md-1"></th>
+              <th class="col-md-2">regression</th>
+              <th class="col-md-2">convolutional</th>
+            </tr>
+            <tr>
+              <th>0</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>1</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>2</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>3</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>4</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>5</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>6</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>7</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>8</th>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th>9</th>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        </div>     
       </div>
-
     </div><!-- /.container -->
 
 
@@ -66,5 +109,7 @@
     <script src="static/jquery.min.js"></script>
     <script src="static/bootstrap.min.js"></script>
     <script src="static/draw.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
   </body>
 </html>
