@@ -1,31 +1,55 @@
 # adapted from : http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
 # adapted from : https://github.com/Erlemar/digits_little
+# adapted from : https://github.com/sugyan/tensorflow-mnist/blob/master/main.py
 
-from functions import Model
-from flask import Flask, render_template, request
-from flask_cors import CORS, cross_origin
-import base64
-import os
+import numpy as np
+import tensorflow as tf
+from flask import Flask, jsonify, render_template, request
 
+from mnist import model
+
+
+x = tf.placeholder("float", [None, 784])
+sess = tf.Session()
+
+# restore trained data
+with tf.variable_scope("regression"):
+    y1, variables = model.regression(x)
+saver = tf.train.Saver(variables)
+saver.restore(sess, "mnist/data/regression.ckpt")
+
+
+with tf.variable_scope("convolutional"):
+    keep_prob = tf.placeholder("float")
+    y2, variables = model.convolutional(x, keep_prob)
+saver = tf.train.Saver(variables)
+saver.restore(sess, "mnist/data/convolutional.ckpt")
+
+
+def regression(input):
+    return sess.run(y1, feed_dict={x: input}).flatten().tolist()
+
+
+def convolutional(input):
+    return sess.run(y2, feed_dict={x: input, keep_prob: 1.0}).flatten().tolist()
+
+
+# webapp
 app = Flask(__name__)
-model = Model()
-CORS(app, headers=['Content-Type'])
 
-@app.route("/", methods=["POST", "GET", 'OPTIONS'])
-def index_page():
 
-	return render_template('home.html')
+@app.route('/api/mnist', methods=['POST'])
+def mnist():
+    input = ((255 - np.array(request.json, dtype=np.uint8)) / 255.0).reshape(1, 784)
+    output1 = regression(input)
+    output2 = convolutional(input)
+    return jsonify(results=[output1, output2])
 
-@app.route('/hook', methods = ["GET", "POST", 'OPTIONS'])
-def get_image():
-	if request.method == 'POST':
-		image_b64 = request.values['imageBase64']
-		drawn_digit = request.values['digit']
-		image_encoded = image_b64.split(',')[1]
-		image = base64.decodebytes(image_encoded.encode('utf-8'))		
-		save = model.save_image(drawn_digit, image)		
-	return save
 
-if __name__ == "__main__":  
-    #Run the app.
+@app.route('/')
+def main():
+    return render_template('home.html')
+
+
+if __name__ == '__main__':
     app.run()
