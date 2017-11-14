@@ -1,115 +1,99 @@
-  <!-- https://getbootstrap.com/docs/4.0/examples/ -->
+<!-- https://getbootstrap.com/docs/4.0/examples/ -->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<head>
+</head>
+<nav class="navbar navbar-inverse">
+  <a class="navbar-brand" href="#">Digit Recognition</a>
+</nav>
+<body>
+  <div class="container">
 
-    <title>Starter Template for Bootstrap</title>
-    <link rel="stylesheet" type="text/css" href="static/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-  </head>
+    <div class="starter-template">
+      <h1>Drawing box</h1>
+      <p class="lead">Draw number here!</p>
+    </div>
 
-  <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand" href="#">Navbar w/ text</a>
-      </div>
-    </nav>
-
-    <div class="container">
-
-      <div class="starter-template">
-        <h1>Drawing box</h1>
-        <p class="lead">Draw number here!</p>
-      </div>
-
-      <!-- Adapted from: https://habrahabr.ru/company/ods/blog/335998/ -->
-      <!-- https://github.com/sugyan/tensorflow-mnist/blob/master/templates/index.html -->
+    <!-- Adapted from: https://habrahabr.ru/company/ods/blog/335998/ -->
+    <!-- https://github.com/sugyan/tensorflow-mnist/blob/master/templates/index.html -->
+    <div>
+      <canvas id="main"></canvas>
       <div>
-        <canvas id="main"></canvas>
-        <div>
-          <button type="button" class="btn btn-default butt" onclick="clearCanvas()"><strong>clear</strong></button>
-        </div>
-        <div class="col-md-6">
-          <p>input:</p>
-          <canvas id="input" style="border:1px solid" width="140" height="140"></canvas>
-          <hr>
-          <p>output:</p>
-          <table id="output" class="table">
-            <tr>
-              <th class="col-md-1"></th>
-              <th class="col-md-2">regression</th>
-              <th class="col-md-2">convolutional</th>
-            </tr>
-            <tr>
-              <th>0</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>1</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>2</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>3</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>4</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>5</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>6</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>7</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>8</th>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <th>9</th>
-              <td></td>
-              <td></td>
-            </tr>
-          </table>
-        </div>     
+        <button id="clear" class="btn btn-default butt">clear</button>
       </div>
-    </div><!-- /.container -->
+      <div class="col-md-6">
+        <p>input:</p>
+        <canvas id="input" style="border:1px solid" width="140" height="140"></canvas>
+        <hr>
+        <p>output:</p>
+        <table id="output" class="table">
+          <tr>
+            <th class="col-md-1"></th>
+            <th class="col-md-2">regression</th>
+            <th class="col-md-2">convolutional</th>
+          </tr>
+          <tr>
+            <th>0</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>1</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>2</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>3</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>4</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>5</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>6</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>7</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>8</th>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>9</th>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- /.container -->
 
-
-    <!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
-    <script src="static/jquery.min.js"></script>
-    <script src="static/bootstrap.min.js"></script>
-    <script src="static/draw.js"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
-  </body>
+  <!-- Placed at the end of the document so the pages load faster -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
 </html>
