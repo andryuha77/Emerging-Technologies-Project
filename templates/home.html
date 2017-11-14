@@ -1,36 +1,40 @@
 <!-- https://getbootstrap.com/docs/4.0/examples/ -->
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
 </head>
 <nav class="navbar navbar-inverse">
   <a class="navbar-brand" href="#">Digit Recognition</a>
 </nav>
-<body>
+
+<body style="background-color:rgba(235, 233, 255, 0.534);">
   <div class="container">
-
-    <div class="starter-template">
-      <h1>Drawing box</h1>
-      <p class="lead">Draw number here!</p>
-    </div>
-
-    <!-- Adapted from: https://habrahabr.ru/company/ods/blog/335998/ -->
-    <!-- https://github.com/sugyan/tensorflow-mnist/blob/master/templates/index.html -->
-    <div>
-      <canvas id="main"></canvas>
-      <div>
-        <button id="clear" class="btn btn-default butt">clear</button>
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Drawing box</h1>
+        <p class="lead">Draw number here!</p>
+        <!-- Adapted from: https://habrahabr.ru/company/ods/blog/335998/ -->
+        <!-- Adapted from: https://github.com/sugyan/tensorflow-mnist/blob/master/templates/index.html -->
+        <canvas id="main"></canvas>
+        <p>
+          <button id="clear" class="btn btn-default butt">Clear</button>
+        </p>
       </div>
       <div class="col-md-6">
-        <p>input:</p>
+        <p>Input:</p>
         <canvas id="input" style="border:1px solid" width="140" height="140"></canvas>
         <hr>
-        <p>output:</p>
+        <p>Output:</p>
         <table id="output" class="table">
           <tr>
             <th class="col-md-1"></th>
-            <th class="col-md-2">regression</th>
-            <th class="col-md-2">convolutional</th>
+            <th class="col-md-2">Regression
+              <a href="https://www.tensorflow.org/get_started/mnist/beginners">(For Beginners)</a>
+            </th>
+            <th class="col-md-2">Convolutional
+              <a href="https://www.tensorflow.org/get_started/mnist/pros">(For Experts)</a>
+            </th>
           </tr>
           <tr>
             <th>0</th>
@@ -91,7 +95,7 @@
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
   <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
