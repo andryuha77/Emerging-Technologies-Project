@@ -3,11 +3,11 @@ class Main {
     constructor() {
         this.canvas = document.getElementById('main');
         this.input = document.getElementById('input');
-        this.canvas.width  = 449; // 16 * 28 + 1
+        this.canvas.width = 449; // 16 * 28 + 1
         this.canvas.height = 449; // 16 * 28 + 1
         this.ctx = this.canvas.getContext('2d');
         this.canvas.addEventListener('mousedown', this.onMouseDown.bind(this));
-        this.canvas.addEventListener('mouseup',   this.onMouseUp.bind(this));
+        this.canvas.addEventListener('mouseup', this.onMouseUp.bind(this));
         this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
         this.initialize();
     }
@@ -19,13 +19,13 @@ class Main {
         this.ctx.lineWidth = 0.05;
         for (var i = 0; i < 27; i++) {
             this.ctx.beginPath();
-            this.ctx.moveTo((i + 1) * 16,   0);
+            this.ctx.moveTo((i + 1) * 16, 0);
             this.ctx.lineTo((i + 1) * 16, 449);
             this.ctx.closePath();
             this.ctx.stroke();
 
             this.ctx.beginPath();
-            this.ctx.moveTo(  0, (i + 1) * 16);
+            this.ctx.moveTo(0, (i + 1) * 16);
             this.ctx.lineTo(449, (i + 1) * 16);
             this.ctx.closePath();
             this.ctx.stroke();
