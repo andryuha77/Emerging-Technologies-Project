@@ -1,32 +1,38 @@
 /* global $ */
+//adapted from: https://github.com/sugyan/tensorflow-mnist/blob/master/src/js/main.js
 class Main {
+    //constructor for canvas 
     constructor() {
+        // 2 canvas id "main" and 'input'
         this.canvas = document.getElementById('main');
         this.input = document.getElementById('input');
+        //canvas size
         this.canvas.width = 449; // 16 * 28 + 1
         this.canvas.height = 449; // 16 * 28 + 1
         this.ctx = this.canvas.getContext('2d');
+        //Event listeners for the mouse movements
         this.canvas.addEventListener('mousedown', this.onMouseDown.bind(this));
         this.canvas.addEventListener('mouseup', this.onMouseUp.bind(this));
         this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this));
         this.initialize();
     }
     initialize() {
-        this.ctx.fillStyle = '#FFFFFF';
+        this.ctx.fillStyle = '#f8ffea';
         this.ctx.fillRect(0, 0, 449, 449);
         this.ctx.lineWidth = 1;
         this.ctx.strokeRect(0, 0, 449, 449);
         this.ctx.lineWidth = 0.05;
+        //background for main canvas
         for (var i = 0; i < 27; i++) {
             this.ctx.beginPath();
-            this.ctx.moveTo((i + 1) * 16, 0);
-            this.ctx.lineTo((i + 1) * 16, 449);
+            this.ctx.moveTo((i + 1) * 112, 0);
+            this.ctx.lineTo((i + 1) * 112, 449);
             this.ctx.closePath();
             this.ctx.stroke();
 
             this.ctx.beginPath();
-            this.ctx.moveTo(0, (i + 1) * 16);
-            this.ctx.lineTo(449, (i + 1) * 16);
+            this.ctx.moveTo(0, (i + 1) * 112);
+            this.ctx.lineTo(449, (i + 1) * 112);
             this.ctx.closePath();
             this.ctx.stroke();
         }
@@ -42,6 +48,7 @@ class Main {
         this.drawing = false;
         this.drawInput();
     }
+
     onMouseMove(e) {
         if (this.drawing) {
             var curr = this.getPosition(e.clientX, e.clientY);
@@ -117,10 +124,11 @@ class Main {
                 }
             });
         };
+        //method returns a data URI containing a representation of the image
         img.src = this.canvas.toDataURL();
     }
 }
-
+//call initialize to clear the canvas
 $(() => {
     var main = new Main();
     $('#clear').click(() => {
