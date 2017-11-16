@@ -21,14 +21,6 @@ Note that accuracy of approximately 99% is considered excellent in recognising d
 
 ## Design
 
-### List my Questions.
-
-First, I start by listing my questions that I want to answer about my application.
-
-* What
-
-From these questions, I can identify the attributes that must belong to entities within application .
-
 ## Implementation
 1. Created simple page using [flask](http://flask.pocoo.org/) example  
 
@@ -54,7 +46,7 @@ I had an issue to install it on my laptop, so I used:
 ```
 easy_install boto3
 ```
-More required software names can be found in the requirements file, but most of it included [requirements](https://github.com/andryuha77/Emerging-Technologies-Project/blob/master/requirements.txt) in [Anaconda](https://www.anaconda.com/download/).
+More required software names can be found in the  [requirements](https://github.com/andryuha77/Emerging-Technologies-Project/blob/master/requirements.txt) file, but most of it included in [Anaconda](https://www.anaconda.com/download/).
 
 #### Installing TensorFlow on Windows
 
@@ -92,13 +84,15 @@ $ python main.py
 ```
 Once the application is running, it can be accessed by pointing your browser at http://127.0.0.1:5000/ .
 
-### Architecture
-This web application runs in [Python 3](https://www.python.org) using the [Flask](http://flask.pocoo.org/) web micro-framework.
-Python 3 and Flask were requirements for the project.
-
 ### References:
-adapted from : http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
+adapted from: http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
 
-adapted from : https://github.com/Erlemar/digits_little
+adapted from: https://github.com/Erlemar/digits_little
 
 adapted from: https://github.com/visraman26/DigitRecognition/blob/master/digitRecognition.py
+
+adapted from: https://github.com/sugyan/tensorflow-mnist/blob/master/main.py
+
+adapted from: https://www.tensorflow.org/get_started/mnist/beginners
+
+adapted from: https://www.tensorflow.org/get_started/mnist/pros
