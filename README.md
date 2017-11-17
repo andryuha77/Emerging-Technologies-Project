@@ -15,13 +15,19 @@ Note that accuracy of approximately 99% is considered excellent in recognising d
 3. Add a route to your application that accepts requests containing a user input image and responds with the digit.
 4. Connect the HTML page to the route using AJAX.
 
+## Research
 ### What is a [flask](http://flask.pocoo.org/)?
+Flask is a micro web framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine. It is BSD licensed.
 
-### What is a [tensorflow](https://www.tensorflow.org/)?
+The latest stable version of Flask is 0.12.2 as of May 2017.
 
-## Design
+Flask is called a micro framework because it does not require particular tools or libraries. It has no database abstraction layer, form validation, or any other components where pre-existing third-party libraries provide common functions. However, Flask supports extensions that can add application features as if they were implemented in Flask itself. Extensions exist for object-relational mappers, form validation, upload handling, various open authentication technologies and several common framework related tools. Extensions are updated far more regularly than the core Flask program.
 
-## Implementation
+### What is a [TensorFlow™](https://www.tensorflow.org/)?
+
+[TensorFlow™](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API. TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within Google's Machine Intelligence research organization for the purposes of conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
+
+## Design and Implementation
 1. Created simple page using [flask](http://flask.pocoo.org/) example  
 
 to run it:
