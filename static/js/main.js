@@ -94,11 +94,15 @@ class Main {
                 contentType: 'application/json',
                 data: JSON.stringify(inputs),
                 success: (data) => {
+                    // for loop for each column
+
                     for (let i = 0; i < 2; i++) {
                         var max = 0;
                         var max_index = 0;
+                        // for loop  for numbers from 0 to 9
                         for (let j = 0; j < 10; j++) {
                             var value = Math.round(data.results[i][j] * 1000);
+                            // save max value and value index
                             if (value > max) {
                                 max = value;
                                 max_index = j;
@@ -120,10 +124,9 @@ class Main {
                                 $('#output tr').eq(j + 1).find('td').eq(i).removeClass('success');
                             }
                         }
+                        // send max valu to display 
+                        $('#output-text').text(max_index);
                     }
-
-                //    $('#output-text').text(value);
-                $('#output-text').text(2999388);
                 }
             });
         };
