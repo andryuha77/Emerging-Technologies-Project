@@ -121,6 +121,9 @@ class Main {
                             }
                         }
                     }
+
+                //    $('#output-text').text(value);
+                $('#output-text').text(2999388);
                 }
             });
         };
