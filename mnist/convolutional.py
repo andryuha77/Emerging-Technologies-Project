@@ -1,4 +1,4 @@
-# adpted from: https://www.tensorflow.org/get_started/mnist/beginners
+# adpted from: hhttps://www.tensorflow.org/get_started/mnist/pros
 # adpted from: https://github.com/sugyan/tensorflow-mnist/blob/master/mnist/convolutional.py
 
 import os
