@@ -1,3 +1,5 @@
+# adapted from: https://www.tensorflow.org/get_started/mnist/pros
+# adapted from: https://github.com/sugyan/tensorflow-mnist/blob/master/mnist/regression.py
 import os
 import model
 import tensorflow as tf

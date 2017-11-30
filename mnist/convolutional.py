@@ -1,3 +1,6 @@
+# adpted from: https://www.tensorflow.org/get_started/mnist/beginners
+# adpted from: https://github.com/sugyan/tensorflow-mnist/blob/master/mnist/convolutional.py
+
 import os
 import model
 import tensorflow as tf

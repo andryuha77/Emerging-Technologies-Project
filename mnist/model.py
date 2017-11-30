@@ -1,3 +1,5 @@
+#adapted from: https://www.tensorflow.org/get_started/mnist/pros
+#adapted from: https://github.com/sugyan/tensorflow-mnist/blob/master/m
 
 #To use TensorFlow, first we need to import it.
 import tensorflow as tf
