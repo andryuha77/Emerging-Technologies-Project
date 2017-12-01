@@ -28,7 +28,8 @@ cross_entropy = -tf.reduce_sum(y_ * tf.log(y))
 # minimize cross_entropy using the gradient descent algorithm with a learning rate of 0.1
 train_step = tf.train.GradientDescentOptimizer(0.01).minimize(cross_entropy)
 
-#Evaluating Our Model
+# Evaluating Our Model
+# tf.argmax gives the index of the highest entry in a tensor along axis
 correct_prediction = tf.equal(tf.argmax(y, 1), tf.argmax(y_, 1))
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
@@ -39,7 +40,9 @@ with tf.Session() as sess:
 
     #Training the model by running train_step 1000 times
     for _ in range(1000):
+        # load 100 training examples in each training iteration
         batch_xs, batch_ys = data.train.next_batch(100)
+        # replace the placeholder tensors x and y_ with the training examples
         sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
     # evaluate our accuracy on the test data

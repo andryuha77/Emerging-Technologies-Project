@@ -2,6 +2,7 @@
 # adapted from : https://github.com/Erlemar/digits_little
 # adapted from : https://github.com/sugyan/tensorflow-mnist/blob/master/main.py
 
+# imports
 import numpy as np
 import tensorflow as tf
 from flask import Flask, jsonify, render_template, request
@@ -16,6 +17,7 @@ sess = tf.Session()
 with tf.variable_scope("regression"):
     y1, variables = model.regression(x)
 saver = tf.train.Saver(variables)
+# from file in data folder
 saver.restore(sess, "mnist/data/regression.ckpt")
 
 
