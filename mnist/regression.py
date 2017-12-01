@@ -7,6 +7,7 @@ import tensorflow as tf
 
 # download and read MNIST data
 from tensorflow.examples.tutorials.mnist import input_data
+# read from datafolder
 data = input_data.read_data_sets("/tmp/data/", one_hot=True)
 
 # adapted from: https://www.tensorflow.org/get_started/mnist/beginners
@@ -35,12 +36,16 @@ saver = tf.train.Saver(variables)
 with tf.Session() as sess:
     # initial values and assigns them to each Variable
     sess.run(tf.global_variables_initializer())
+
+    #Training the model by running train_step 1000 times
     for _ in range(1000):
         batch_xs, batch_ys = data.train.next_batch(100)
         sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 
+    # evaluate our accuracy on the test data
     print(sess.run(accuracy, feed_dict={x: data.test.images, y_: data.test.labels}))
 
+    # save regression to file
     path = saver.save(
         sess, os.path.join(os.path.dirname(__file__), 'data', 'regression.ckpt'),
         write_meta_graph=False, write_state=False)
