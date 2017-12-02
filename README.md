@@ -27,7 +27,28 @@ Flask is called a micro framework because it does not require particular tools o
 
 [TensorFlow™](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API. TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within Google's Machine Intelligence research organization for the purposes of conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
 
+To accomplish this project I divided the work into some main points to research and complete:
+
+1. Created simple page using [flask](http://flask.pocoo.org/) example
+2. Upload an image to webapp
+3. Send that image to server
+4. Be able to process/reize etc the image
+5. Create a tensorflow or keras model
+6. Use mnist to train and  test it
+7. Save that model
+8. Use the uploaded images
+9. send prediction to webapp
+
 ## Design and Implementation
+During the research and creation of a solution for the project, I went through multiple solutions available online and complete [TensorFlow™](https://www.tensorflow.org/) examples in labs.  References to used solutions available at the end of this readme file. 
+
+### Difficulties
+
+Environment Installation on my two machines homes PC and laptop. It takes me awhile to figure out how to install [TensorFlow™](https://www.tensorflow.org/) to be able to use it in Jupiter notebook for the course labs.
+
+From the history of my commits on GitHub, it is possible to see that some of the flies/solutions were completely removed or rebuild as it was difficult to put some of the pieces together, for example, resize saved pictures or send values to HTML page using ajax.
+
+
 1. Created simple page using [flask](http://flask.pocoo.org/) example  
 
 to run it:
@@ -92,6 +113,8 @@ Once the application is running, it can be accessed by pointing your browser at 
 
 ### References:
 adapted from: http://flask.pocoo.org/docs/0.12/quickstart/#a-minimal-application
+
+adapted from: https://habrahabr.ru/company/ods/blog/335998/
 
 adapted from: https://github.com/Erlemar/digits_little
 

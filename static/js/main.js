@@ -95,7 +95,6 @@ class Main {
                 data: JSON.stringify(inputs),
                 success: (data) => {
                     // for loop for each column
-
                     for (let i = 0; i < 2; i++) {
                         var max = 0;
                         var max_index = 0;
