@@ -61,10 +61,12 @@ $ flask run
  ```
 
 ### Digits Recognition
-![](https://ibb.co/fgayXw)
 
+Tensorflow tutorials were used for digits recognition. The home HTML page displays two results: regression function that is a model for recognizing MNIST digits, based on looking at every pixel in the image and a multilayer convolutional neural network with improved results.  The final decision number based on multilayer result and displayed using AJAX.
 
-### How to run the application
+![](https://image.ibb.co/ci7qeb/Capture.png)
+
+## How to run the application
 The application is written using the [Flask](http://flask.pocoo.org/) library in [Python 3](https://www.python.org).
 Both must be installed to run the project.
 Alternatively, this can be easily achieved by installing [Anaconda](https://www.anaconda.com/download/) which includes both of them.
