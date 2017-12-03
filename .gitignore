@@ -43,6 +43,9 @@ coverage.xml
 .project
 .pydevproject
 
+# ignore .vscode
+.vscode/
+
 # Rope
 .ropeproject
 
