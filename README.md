@@ -1,5 +1,6 @@
 # Emerging-Technologies-Project
-Project for the module for [Emerging Technologies](https://emerging-technologies.github.io/) 2017 module.
+My Name is Andrey Petruk final year Software Development student.
+This is project for the [Emerging Technologies](https://emerging-technologies.github.io/) 2017 module.
 The module is taught to undergraduate students at [GMIT](http://www.gmit.ie) in the Department of Computer Science and Applied Physics.
 The lecturer is [Ian McLoughlin](https://ianmcloughlin.github.io).
 
@@ -27,7 +28,7 @@ Flask is called a micro framework because it does not require particular tools o
 
 [TensorFlow™](https://www.tensorflow.org/) is an open source software library for numerical computation using data flow graphs. Nodes in the graph represent mathematical operations, while the graph edges represent the multidimensional data arrays (tensors) communicated between them. The flexible architecture allows you to deploy computation to one or more CPUs or GPUs in a desktop, server, or mobile device with a single API. TensorFlow was originally developed by researchers and engineers working on the Google Brain Team within Google's Machine Intelligence research organization for the purposes of conducting machine learning and deep neural networks research, but the system is general enough to be applicable in a wide variety of other domains as well.
 
-To accomplish this project I divided the work into some main points to research and complete:
+#### To accomplish this project I divided the work into some main points to research and complete:
 
 1. Created simple page using [flask](http://flask.pocoo.org/) example
 2. Upload an image to webapp
