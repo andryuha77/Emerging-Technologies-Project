@@ -37,7 +37,7 @@ To accomplish this project I divided the work into some main points to research 
 6. Use mnist to train and  test it
 7. Save that model
 8. Use the uploaded images
-9. send prediction to webapp
+9. Send prediction to webapp
 
 ## Design and Implementation
 During the research and creation of a solution for the project, I went through multiple solutions available online and complete [TensorFlow™](https://www.tensorflow.org/) examples in labs.  References to used solutions available at the end of this readme file. 
@@ -49,7 +49,9 @@ Environment Installation on my two machines homes PC and laptop. It takes me awh
 From the history of my commits on GitHub, it is possible to see that some of the flies/solutions were completely removed or rebuild as it was difficult to put some of the pieces together, for example, resize saved pictures or send values to HTML page using ajax.
 
 
-1. Created simple page using [flask](http://flask.pocoo.org/) example  
+### Created simple page using [flask](http://flask.pocoo.org/) example  
+Create simple Web App was not difficult as we complete Data Representation course year ago, so I just refresh memory going thru my previous single page app project and [flask](http://flask.pocoo.org/) example.
+
 
 to run it:
 ```
@@ -58,6 +60,8 @@ $ flask run
  * Running on http://127.0.0.1:5000/
  ```
 
+### Digits Recognition
+![](https://ibb.co/fgayXw)
 
 
 ### How to run the application
