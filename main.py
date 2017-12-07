@@ -10,7 +10,7 @@ from mnist import model
 
 # placeholder images x will consist of a 2d tensor of floating point numbers
 x = tf.placeholder("float", [None, 784])
-#  TensorFlow session that holds the exporting trained model
+# TensorFlow session that holds the exporting trained model
 sess = tf.Session()
 
 # restore trained data
