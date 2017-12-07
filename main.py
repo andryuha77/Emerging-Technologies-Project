@@ -15,7 +15,7 @@ sess = tf.Session()
 
 # restore trained data
 with tf.variable_scope("regression"):
-    y1, variables = model.regrssion(x)
+    y1, variables = model.regression(x)
 
 # #Load the stored model   
 saver = tf.train.Saver(variables)
